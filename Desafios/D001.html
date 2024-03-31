@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Em qual país voce nasceu?</h1>
+    <label for="txtname">nasci no pais de:</label>
+    <input type="text" name="txtname" id="txtname">
+    <input type="button" value="Enviar" onclick="calcular()">
+
+    <div id="res"></div>
+    
+
+    <script>
+        var txtname = window.document.querySelector('input#txtname')
+        function calcular() {
+            var txtn = window.document.querySelector('input#txtname')
+            var res = window.document.querySelector('div#res')
+            var p = (txtn.value)
+            res.innerHTML = `<p>Se voce nasceu em ${p} você é: </p>`
+            if (p == 'brasil') {
+                res.innerHTML += `<p>Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Estrangeiro</p>`
+            }
+
+        }
+
+    </script>
+</body>
+</html>
